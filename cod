@@ -1,0 +1,111 @@
+package GA;
+
+public class GA_main {
+
+	
+	
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		GA ga = new GA();
+		//problem definition
+			
+			
+		
+		
+		
+		
+	}
+
+	
+	
+	
+}
+
+	class GA {
+		int var ; 			// Number of Decision Variables,Number of cr
+		int[] varsize;   	// Decision Variables Matrix Size, Matrix cr
+		int C; 				// variable cost function
+		int MaxIt;			// Maximum Number of Iterations
+		int nPop;			// Population Size
+		float pc;                 // Crossover Percentage
+		int nc;				// Number of Offsprings (Parnets)
+		float pm;			// Mutation Percentage
+		int nm;				// Number of Mutants
+		float mu;			// Mutation Rate
+		
+		
+		public  void  problem_definition(){
+		var=14;			// defined cost function
+		varsize = new int[var];
+		
+		}
+		public void GA_parameters(){
+			MaxIt=100;		// Maximum Number of Iterations
+			nPop=20;        // Population Size
+
+			pc=(float) 0.8;                 // Crossover Percentage
+			nc=2*Math.round(pc*nPop/2);  // Number of Offsprings (Parnets)
+			
+			pm=(float) 0.3;                 	// Mutation Percentage
+			nm=Math.round(pm*nPop);      	// Number of Mutants
+				
+			mu=(float) 0.02;         			// Mutation Rate
+
+		}
+		
+		public void Initialization(){
+			
+//			for (int i = 0; i < nPop; i++) {
+//				 
+//			}
+		
+			individual[] pop= new individual[nPop];
+			for (int i = 0; i < nPop-1; i++) {
+			
+			 pop[i].set_Position(2, var);	//Initialize Position
+			 pop[i].set_cost(1, var);		//Evaluation
+		}
+
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		public int costfuction(){
+			
+			return C;
+		}
+}
+
+	class individual {
+		int[] Position;
+		int[] Cost;
+		int y;
+		
+		public individual(){
+			Cost= new int[y];
+			Position= new int[y];
+		}
+		void set_cost(int x,int z){
+			y=z;
+			
+		}
+		void set_Position(int x, int y){
+			Position= new int[y];
+		}
+		int get_Position(int x, int y){
+			Position= new int[y];
+		return 1;
+		}
+	}
