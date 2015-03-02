@@ -1,5 +1,5 @@
 GA-java
 =======
 
-Sample code for GA
+implement sinx with Gene 
 
